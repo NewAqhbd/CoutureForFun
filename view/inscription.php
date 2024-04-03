@@ -6,7 +6,7 @@
     <title>Inscription</title>
 </head>
 <body>
-    <form action="../controller/inscriptionController.php" method="post">
+    <form action="/Web_L2/controller/inscriptionController.php" method="post">
         <input type="text" name="mail" id="mail" placeholder="Mail">
         <input type="password" name="mdp" id="mdp" placeholder="Mot de passe" required>
         <input type="password" name="mdp_confirmation" id="mdp" placeholder="Confirmer mot de passe" required>
