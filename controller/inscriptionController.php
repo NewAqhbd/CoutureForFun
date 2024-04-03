@@ -3,7 +3,7 @@ require "../model/Inscription.php";
 require "../bdd.php";
 
 if (isset($_POST["inscription"])) {
-    return require_once "../view/inscription.php";
+    header("Location: /Web_L2/view/inscription.php");
 }
 
 if (isset($_POST["create_user"])) {
@@ -13,10 +13,12 @@ if (isset($_POST["create_user"])) {
 
     if ($mdp == $mdp_confirm) {
         create_account($mail, $mdp);
+        header("Location: /Web_L2/view/index.php");
     }
     else { ?> 
-        <script>alert("Mots de passe différends");</script>   
-    <?php }
+        <script>alert("Mots de passe différends");</script> <?php 
+        header("Location: /Web_L2/view/inscription.php");    
+    }
 
 }
 

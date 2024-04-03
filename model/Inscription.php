@@ -1,4 +1,5 @@
 <?php
+require "../model/Connexion.php";
 
 function create_account($mail, $mdp) {
     global $con;
@@ -23,6 +24,8 @@ function create_account($mail, $mdp) {
 
     else {?>
         <script>alert("Ce mail existe déjà. Veuillez en choisir un autre.")</script><?php
+
+        header("Location: /Web_L2/view/accueil/index.php");
     }
 
 }

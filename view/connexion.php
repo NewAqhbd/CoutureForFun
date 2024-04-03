@@ -6,7 +6,15 @@
     <title>Connexion</title>
 </head>
 <body>
-    <form action="../controller/connexionController.php" method="post">
+<?php
+    session_start();
+    if (isset($_SESSION["erreur"])) {
+        echo '<script>alert("'. $_SESSION["erreur"] .'")</script>';
+        unset($_SESSION['erreur']);
+    }    
+?>
+
+    <form action="/Web_L2/controller/connexionController.php" method="post">
         <input type="text" name="mail" id="mail" placeholder="Mail">
         <input type="password" name="mdp" id="mdp" placeholder="Mot de passe">
 
