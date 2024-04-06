@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+}
+
+.card{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.container{
+    margin-top: 15px;
+}
+
+.btn{
+    margin-top: 7px;
+}
+
+
+/*style pour la page récapitulatif*/
+.conrecap{
+    width: 90%;
+    margin: 0 auto;
+}
+.recapitulatif {
+    border: 2px solid rgba(0, 0, 0, 0.278);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.recapitulatif h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.recapitulatif div {
+    margin-bottom: 10px;
+}
+
+.recapitulatif strong {
+    color: #FFC300;
+}
