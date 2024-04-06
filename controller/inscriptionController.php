@@ -12,12 +12,19 @@ if (isset($_POST["create_user"])) {
     $mdp_confirm = $_POST["mdp_confirmation"];
 
     if ($mdp == $mdp_confirm) {
-        create_account($mail, $mdp);
-        header("Location: /Web_L2/view/index.php");
+        if(create_account($mail, $mdp)) {
+            header("Location: /Web_L2/view/index.php");
+        }
+        else {
+            session_start();
+            $_SESSION["erreur"] = "Ce mail existe déjà. Veuillez en choisir un autre.";
+            header("Location: /Web_L2/view/inscription.php");
+        }
     }
-    else { ?> 
-        <script>alert("Mots de passe différends");</script> <?php 
-        header("Location: /Web_L2/view/inscription.php");    
+    else { 
+        session_start();
+        $_SESSION["erreur"] = "Mots de passe différends.";
+        header("Location: /Web_L2/view/inscription.php");   
     }
 
 }

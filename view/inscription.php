@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
 </head>
+<?php
+    session_start();
+    if (isset($_SESSION["erreur"])) {
+        echo '<script>alert("'. $_SESSION["erreur"] .'")</script>';
+        unset($_SESSION['erreur']);
+    }
+?>
+
 <body>
     <form action="/Web_L2/controller/inscriptionController.php" method="post">
         <input type="text" name="mail" id="mail" placeholder="Mail">
