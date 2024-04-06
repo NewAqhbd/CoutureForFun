@@ -2,15 +2,11 @@
 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 if(!isset($_SESSION)){ 
-
     session_start();
-
 }
 
 if(!isset($_SESSION['connecte'])){
-
-    $_SESSION['connecte'] = False;
-    
+    $_SESSION['connecte'] = false; 
 }
 
 try {

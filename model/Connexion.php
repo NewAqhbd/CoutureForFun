@@ -14,13 +14,14 @@ function connexion($mail, $mdp) {
         $req->bindValue(':mdp', $encrypted_mdp, PDO::PARAM_STR);
         $req->execute();
 
+        $id = $req->fetchColumn(0);
         $count = $req->rowCount();
-        var_dump($count);
 
         if($count == 1){ //S'il existe une correspondance entre login et mdp, établir la connexion
+            $_SESSION['id'] = $id;
             $_SESSION['mail'] = $mail;
             $_SESSION['mdp'] = $encrypted_mdp;
-            $_SESSION['connecte'] = True;
+            $_SESSION['connecte'] = true;
 
             return true;
         } 
