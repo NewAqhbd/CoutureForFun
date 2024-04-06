@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 06 avr. 2024 à 11:48
+-- Généré le : sam. 06 avr. 2024 à 15:46
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -56,10 +56,22 @@ CREATE TABLE IF NOT EXISTS `inscrit` (
   `id_inscription` int(11) NOT NULL AUTO_INCREMENT,
   `id_cours` int(5) NOT NULL,
   `id_utilisateur` int(5) NOT NULL,
+  `valid` tinyint(4) NOT NULL,
   PRIMARY KEY (`id_inscription`),
   KEY `fk_id_utilisateur` (`id_utilisateur`),
   KEY `fk_id_cours` (`id_cours`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `inscrit`
+--
+
+INSERT INTO `inscrit` (`id_inscription`, `id_cours`, `id_utilisateur`, `valid`) VALUES
+(1, 1, 2, 1),
+(2, 2, 2, 1),
+(3, 3, 2, 1),
+(4, 1, 3, 1),
+(5, 2, 3, 0);
 
 -- --------------------------------------------------------
 
@@ -73,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `email` varchar(50) NOT NULL,
   `mdp` varchar(50) NOT NULL,
   PRIMARY KEY (`id_utilisateur`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateur`
@@ -81,7 +93,11 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 
 INSERT INTO `utilisateur` (`id_utilisateur`, `email`, `mdp`) VALUES
 (1, 'mail@test.com', '123'),
-(2, 'test', '098f6bcd4621d373cade4e832627b4f6');
+(2, 'test', '098f6bcd4621d373cade4e832627b4f6'),
+(3, 'mail@test.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+(4, 'mail@test.com', '03c7c0ace395d80182db07ae2c30f034'),
+(5, 'mail@test.com', '03c7c0ace395d80182db07ae2c30f034'),
+(6, 'mail@test.com', '03c7c0ace395d80182db07ae2c30f034');
 
 --
 -- Contraintes pour les tables déchargées
