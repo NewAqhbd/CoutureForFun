@@ -20,7 +20,7 @@
                             session_start();
                             if (isset($_SESSION["erreur"])) {
                                 echo '<div class="alert alert-danger" role="alert">'. $_SESSION["erreur"] .'</div>';
-                                unset($_SESSION['erreur']);
+                                unset($_SESSION["erreur"]);
                             }    
                         ?>
 
@@ -28,9 +28,9 @@
                             <input type="email" name="mail" id="mail" class="form-control my-4 py-2" placeholder="Mail" required>
                             <input type="password" name="mdp" id="mdp" class="form-control my-4 py-2" placeholder="Mot de passe" required>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Se connecter  </button>
-                                <input type="hidden" name="connecter">
+                                <input type="submit" value="Se connecter" class="btn btn-primary">
                             </div>
+                            <input type="hidden" name="connecter">
                         </form>
                     </div>
                 </div>
