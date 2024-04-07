@@ -55,7 +55,7 @@
           <li><a href="#services">Nos Services</a></li>
           <li><a href="#temoignages">Témoignages</a></li>
           <li><a href="#devis">Devis</a></li>
-          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#contacts">Contact</a></li>
           <li><a href="#informations">Informations</a></li>
           <!-- Ajoutez plus d'éléments au besoin -->
         </ul>
@@ -140,7 +140,7 @@
                 </div>
             </div>
             <div id="contacts" class="col-12 " >
-              <h2>Nos Contacs</h2>
+              <h2>Nos Contact</h2>
               <p>Pour toute question, demande de renseignements ou prise de rendez-vous cliquez sur le bouton ci-dessous.</p>
                 <div class="col-12 d-flex justify-content-center">
                     <form action="/Web_L2/controller/contactController.php" method="post">
