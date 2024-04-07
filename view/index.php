@@ -18,31 +18,34 @@
 
 <header>
     <div class="top-bar d-flex justify-content-between align-items-center">
-        <div class="col-6 "> </div>
-        <div class="col-4 ">
+        <div class="col-md-11 mx-auto text-center"> <!-- Utilisation de la classe mx-auto -->
             <h2>Couture for Fun</h2>
         </div>
-
-        <?php
-            if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) { ?>
-                <form action="/Web_L2/controller/connexionController.php" method="post">
-                    <div class="col-2 d-flex justify-content-end">
-                        <input type="submit" value="Se déconnecter" class="btn btn-primary">
-                    </div>
-                    <input type="hidden" name="deconnexion">
-                </form>
+        <div class="col-md-1 d-flex justify-content-end">
+            <form action="/Web_L2/controller/inscriptionController.php" method="post">
+                <div class="col-2 d-flex justify-content-end">
+                    <input type="submit" name="inscription" value="S'inscrire" class="btn btn-primary">
+                </div>
+            </form>
             <?php
-            }
-            else { ?>
-                <form action="/Web_L2/controller/connexionController.php" method="post">
-                    <div class="col-2 d-flex justify-content-end">
-                        <input type="submit" value="Se connecter" class="btn btn-primary">
-                    </div>
-                    <input type="hidden" name="connexion">
-                </form>
-            <?php
-            }
-        ?>
+                if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) { ?>
+                    <form action="/Web_L2/controller/connexionController.php" method="post">
+                        <div class="col-2 d-flex justify-content-end">
+                            <input type="submit" name="deconnexion" value="Se déconnecter" class="btn btn-primary">
+                        </div>
+                    </form>
+                <?php
+                }
+                else { ?>
+                    <form action="/Web_L2/controller/connexionController.php" method="post">
+                        <div class="col-2 d-flex justify-content-end">
+                            <input type="submit" name="connexion" value="Se connecter" class="btn btn-primary">
+                        </div>
+                    </form>
+                <?php
+                }
+            ?>
+        </div>
     </div>
 </header>
 
