@@ -2,6 +2,8 @@
     include('donnesDevis.php');
 ?>
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 $nom = $_POST["nom"];
 $prenom = $_POST["prenom"];
@@ -42,6 +44,41 @@ $deux = isset($_POST["deux"]) ? $_POST["deux"] : 0;
 $somme = $ourlets + $retouches + $deux;
 $totale = $prixTissu + $prixTaille + $somme;
 
+require '../lib/PHPMailer/src/PHPMailer.php';
+require '../lib/PHPMailer/src/SMTP.php';
+require '../lib/PHPMailer/src/Exception.php';
+
+if(isset($_POST["envoyer"])) {
+    $mailBase = new PHPMailer(true);
+
+    $mailBase->isSMTP();
+    $mailBase->Host = 'smtp.gmail.com';
+    $mailBase->SMTPAuth = true;
+    $mailBase->Username = 'c3564357@gmail.com';
+    $mailBase->Password = 'vubp vfum daku yrqn';
+    $mailBase->SMTPSecure = 'ssl';
+    $mailBase->Port = 465;
+
+    $mailBase->setFrom('c3564357@gmail.com');
+
+    $mailBase->addAddress($mail);
+
+    $mailBase->isHTML(true);
+    $sujet = "Estimation prix";
+    $message = "cher $prenom <br><br>
+                Nous vous remercions de l'intérêt que vous portez à notre service de confection de vêtements sur mesure.<br><br>
+
+                Le prix estimatif de votre devis est de $totale  Euro.<br><br>
+
+                Nous espérons avoir l'opportunité de travailler avec vous prochainement.<br><br>
+                Cordialement, <br>
+                CoutureForFun";
+
+    $mailBase->Subject = $sujet;
+    $mailBase->Body = $message;
+
+    $mailBase->send();
+}
 ?>
 
 <!DOCTYPE html>
