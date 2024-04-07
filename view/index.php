@@ -86,7 +86,9 @@
                   <li><span class="bullet">&#8226;</span> Conseils en stylisme et choix de tissus</li>
                 </ul>
                 <div class="col-12 d-flex justify-content-center">
-                  <a href="video.html" class="btn btn-primary">Accéder aux cours en ligne</a>
+                    <form action="/Web_L2/controller/coursController.php" method="post">
+                        <input type="submit" name="cours" class="btn btn-primary" value="Accéder aux cours en ligne">
+                    </form>
                 </div>
             </div>
             <!-- Témoignages -->
