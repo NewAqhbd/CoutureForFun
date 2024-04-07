@@ -9,8 +9,15 @@
     integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> 
 
+    <link rel="stylesheet" href="/Web_L2/lib/video_style.css">
+
     <title>Contact</title>
 </head>
+
+<?php
+    require "../view/header.php";
+?>
+
 <body>
     <main>
         <!--debut de la première partie du corps-->
