@@ -1,5 +1,10 @@
+ 
+
+html {
+  scroll-behavior: smooth;
+}
 .c-item {
-    max-height: 400px;
+    max-height: 40vw;
 }
 
 .c-img {
@@ -16,7 +21,7 @@
 
 .bot{
   background-color: #000000; /* Change to your desired color */
-  height:400px;
+  height:40vw;
   width:18%;
 }
 
@@ -28,40 +33,33 @@
 }
 
 .carousel-caption{
-    max-width: 900px; 
+    max-width: 50vw; 
     margin : auto;
 }
 
 .btn-connecter {
     background-color: #0ca6ff;
-    /* Couleur de fond par défaut */
     border-color: #816403;
     transition: 0.5s;
-    /* Couleur de bordure par défaut */
 }
 
 .btn-connecter:hover {
 background-color: #FFC300;
-/* Assombrissement au survol */
 border-color: #816403;
-/* Changement de couleur de bordure au survol */
 }
 
 .top-bar {
 background-color: #007bff;
-/* Couleur de fond du bandeau */
 color: #ffffff;
-/* Couleur du texte du bandeau */
 padding: 10px;
-/* Espacement à l'intérieur du bandeau */
+height: 60px;
 font-family: 'Montserrat', sans-serif;
-/* Changer la police ici */
 }
 
-.top-bar h2 {
-  margin-left: 9%;
+.top-bar img {
+  width: 75px;
+  height: auto;
 }
-
 .footer {
     background-color: #343a40;
     color: #bcbcbc;
@@ -86,12 +84,33 @@ font-family: 'Montserrat', sans-serif;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 0;
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 24px; /* Taille de police plus grande */
+    font-size: 3vw; /* Taille de police plus grande */
     font-weight: bold;
     font-family: Georgia, serif;
     z-index: 1000; /* Pour que le texte apparaisse au-dessus du carousel */
+}
+
+.font-size-responsive {
+  font-size: 3vw;
+}
+
+.btn {
+  background-color: #54DFFE;
+  /* Couleur de fond par défaut */
+  border-color: #FFC300;
+  transition: 0.5s;
+  /* Couleur de bordure par défaut */
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #FFC300 !important;
+}
+
+@media screen and (max-width: 769px) {
+  footer {
+    text-align: center;
+  }
 }
