@@ -76,7 +76,7 @@
     </main>
 </body>
 </html>
-
+<?php
 /*
 //pour recevoir le mail il faut configurer le serveur locale(le fichier php.ini ...)
 
@@ -94,3 +94,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mail($mailCouture, $object, $messageEnvois);
 }
 */
+?>
+
