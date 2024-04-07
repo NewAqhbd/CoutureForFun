@@ -49,7 +49,7 @@
                 <!--contact -->
                 <div class="col-lg-8" id="contact">
                     <h2>Contactez Nous</h2>
-                    <form>
+                    <form action="index.php" method="post">
                         <div class="form-group">
                             <label for="name">Nom: </label>
                             <input type="text" class="form-control" id="name">
@@ -67,7 +67,7 @@
                             <textarea class="form-control" rows="3" id="message"></textarea>
                         </div>
                         <div class="boutton">
-                            <input type="submit" value="Envoyer" id="boutton-interne">
+                            <input type="submit" value="Envoyer" id="boutton-interne" name="envoyer">
                         </div>
                     </form>
                 </div>
@@ -76,3 +76,21 @@
     </main>
 </body>
 </html>
+
+/*
+//pour recevoir le mail il faut configurer le serveur locale(le fichier php.ini ...)
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nom = $_POST["nom"];
+    $mail = $_POST["mail"];
+    $object = $_POST["object"];
+    $message = $_POST["message"];
+
+
+    $mailCouture = "coutureForFun@mail.com";
+    $messageEnvois = "Message de $nom<br>
+                    $message";
+
+    mail($mailCouture, $object, $messageEnvois);
+}
+*/
