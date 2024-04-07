@@ -68,7 +68,7 @@
             foreach ($data as $cours) { ?>
                 <div class="col-sm-3" style="margin-bottom: 1rem;">
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="/Web_L2/assets/images/<?= $cours["img"] ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><?= $cours["titre"] ?></h5>
                             <p class="card-text"><?= $cours["description"] ?></p>
