@@ -61,7 +61,7 @@ html {
 .background-image {
   position: relative;
   height: 100vh;
-  background-image: url('boutique.png');
+  background-image: url('/Web_L2/assets/boutique.png');
   background-size: cover;
   background-position: center;
   margin-bottom: 100px;
