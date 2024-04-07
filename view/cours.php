@@ -65,6 +65,7 @@
             $id_c = $cours["id_cours"]; ?>
 
             <div id="debutant-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-title"></div>
                 <div class="carousel-inner">
                     <div class="carousel-item active c-item">
                         <img src="/Web_L2/assets/images/debutant1.png" class="d-block w-100 c-img small-carousel-img" alt="Slide 1">
@@ -75,7 +76,7 @@
                             <?php
                             if (is_inscrit($id_c, $id_u)) { ?>
                                 <form action="/Web_L2/controller/coursController.php" method="post">
-                                    <input type="submit" name="desinscrire" class="btn btn-primary px-4 py-2 fs-3 mt-4" value="Se desinscrire">
+                                    <input type="submit" name="desinscrire" class="btn btn-primary px-4 py-2 fs-3 mt-4" value="Se désinscrire">
                                     <input type="hidden" name="id_c" value="<?= $id_c ?>">
                                 </form>
                             <?php 
