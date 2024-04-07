@@ -78,7 +78,7 @@
   position: relative;
   height: 100vh;
   /* Ajustez selon vos besoins */
-  background-image: url('/Web_L2/assets/boutique.png');
+  background-image: url('boutique.png');
   background-size: cover;
   background-position: center;
   margin-bottom: 100px;
