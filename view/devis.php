@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleDevis.css">
+    <link rel="stylesheet" href="/Web_L2/lib/styleDevis.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -75,16 +75,16 @@
                             <div class="form-group">
                                 <label>Services de base</label><br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input base" type="checkbox" name="ourlets" value="20">
-                                    <label class="form-check-label">Ourlets</label>
+                                    <input class="form-check-input base" type="checkbox" name="ourlets" id="ourlets" value="20">
+                                    <label for="ourlets" class="form-check-label">Ourlets</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input base" type="checkbox" name="retouches" value="30">
-                                    <label class="form-check-label">Retouches</label>
+                                    <input class="form-check-input base" type="checkbox" name="retouches" id="retouches" value="30">
+                                    <label for="retouches" class="form-check-label">Retouches</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input base" type="checkbox" name="deux" value="50">
-                                    <label class="form-check-label">Retouches + Ourlets</label>
+                                    <input class="form-check-input base" type="checkbox" name="deux" id="deux" value="50">
+                                    <label for="deux" class="form-check-label">Retouches + Ourlets</label>
                                 </div><br>
 
                                 <div class="text-center">
@@ -98,7 +98,7 @@
         </div>
     </div>
     
-    <script type="text/javascript" src="devis.js">
+    <script type="text/javascript" src="/Web_L2/lib/devis.js">
 
     </script>
 </body>

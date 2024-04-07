@@ -1,0 +1,102 @@
+.container{
+    margin-top: 100px;
+}
+
+/*changez la couleur de fonc en blanc cassé*/
+html {
+    scroll-behavior: smooth;
+}
+/*modification sue la colonne des informations*/
+#coordonnees{
+    background: #54DFFE;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.titre{
+    padding-top: 10px;
+    text-align: left;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+.sous-titre{
+    font-size: 18px;
+    font-weight: 300px;
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+    line-height: 26px;
+}
+
+.adress-info{
+    list-style: none;
+    margin: 60px 0px;
+}
+
+.adress-info li{
+    margin-top: 25px;
+    font-size: 18px;
+    color: white;
+}
+/*l'intérieur des logos*/
+.adress-info li i{
+    padding: 12px;
+    background: #FFC300;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.adress-info li a{
+    color: white;
+    text-decoration: none;
+}
+
+.adress-info li a:hover{
+    color: #FFC300;
+}
+
+/*Modification sur la page de contact*/
+#contact{
+    background-color: whitesmoke;
+    border-radius: 0px 30px 30px 0px;
+}
+#contact h2{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+.form-group{
+    padding-left: 30px;
+    padding-top: 2px;
+}
+
+#boutton-interne{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #54DFFE;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 10px 0px 10px 400px;
+    border-radius: 10px;
+}
+
+/*Rendre plus responsible le site quand la taille diminue*/
+@media screen and (max-width:990px) {
+    #coordonnees{
+        border-radius: 30px 30px 0px 0px;
+    }
+    #contact{
+        border-radius: 0px 0px 30px 30px;
+    }
+    #boutton-interne{
+        margin: 10px 0px 10px 300px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #boutton-interne{
+        margin: 10px 0px 10px 150px;
+    }
+}

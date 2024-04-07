@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleContact.css">
+    <link rel="stylesheet" href="/Web_L2/lib/styleContact.css">
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" 
     integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous"> 
@@ -52,19 +52,19 @@
                     <form>
                         <div class="form-group">
                             <label for="name">Nom: </label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email: </label>
-                            <input type="email" class="form-control" required>
+                            <input type="email" class="form-control" id="email" required>
                         </div>
                         <div class="form-group">
                             <label for="objet">Object: </label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" class="form-control" id="objet" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message: </label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" rows="3" id="message"></textarea>
                         </div>
                         <div class="boutton">
                             <input type="submit" value="Envoyer" id="boutton-interne">
