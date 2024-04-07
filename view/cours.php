@@ -23,22 +23,25 @@
             <h2>Couture for Fun</h2>
         </div>
         <div class="col-md-1 d-flex justify-content-end">
+            <form action="/Web_L2/controller/inscriptionController.php" method="post">
+                <div class="col-2 d-flex justify-content-end me-4">
+                    <input type="submit" name="inscription" value="S'inscrire" class="btn btn-primary">
+                </div>
+            </form>
             <?php
                 if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) { ?>
                     <form action="/Web_L2/controller/connexionController.php" method="post">
-                        <div class="col-2 d-flex justify-content-end">
-                            <input type="submit" value="Se déconnecter" class="btn btn-primary">
+                        <div class="col-2 d-flex justify-content-end ms-4">
+                            <input type="submit" name="deconnexion" value="Se déconnecter" class="btn btn-primary">
                         </div>
-                        <input type="hidden" name="deconnexion">
                     </form>
                 <?php
                 }
                 else { ?>
                     <form action="/Web_L2/controller/connexionController.php" method="post">
-                        <div class="col-2 d-flex justify-content-end">
-                            <input type="submit" value="Se connecter" class="btn btn-primary">
+                        <div class="col-2 d-flex justify-content-end ms-4">
+                            <input type="submit" name="connexion" value="Se connecter" class="btn btn-primary">
                         </div>
-                        <input type="hidden" name="connexion">
                     </form>
                 <?php
                 }
@@ -62,42 +65,29 @@
             $id_c = $cours["id_cours"]; ?>
 
             <div id="debutant-carousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-title">Cours de Couture</div>
-<!--                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#debutant-carousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#debutant-carousel" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#debutant-carousel" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#debutant-carousel" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                </div> -->
-
                 <div class="carousel-inner">
                     <div class="carousel-item active c-item">
                         <img src="/Web_L2/assets/images/debutant1.png" class="d-block w-100 c-img small-carousel-img" alt="Slide 1">
                         <div class="carousel-caption top-0 mt-4">
-                            <h1 class="display-1 fw-bolder "><?= $cours["titre"] ?></h1>
+                            <h1 class="fw-bolder"><?= $cours["titre"] ?></h1>
+                            <p class="mt-5 fs-3"><?= $cours["prof"] ?></p>
+                            <p class="mt-5 fs-3"><?= $cours["description"] ?></p>
                             <?php
                             if (is_inscrit($id_c, $id_u)) { ?>
                                 <form action="/Web_L2/controller/coursController.php" method="post">
-                                    <input type="button" value="Inscrit">
-                                    <input type="submit" name="desinscrire" class="btn btn-primary px-4 py-2 fs-3 mt-4" value="Se desinscrire" >
+                                    <input type="submit" name="desinscrire" class="btn btn-primary px-4 py-2 fs-3 mt-4" value="Se desinscrire">
                                     <input type="hidden" name="id_c" value="<?= $id_c ?>">
                                 </form>
                             <?php 
                             }
                             else { ?>
                                 <form action="/Web_L2/controller/coursController.php" method="post">
-                                    <input type="submit" value="S'inscrire">
-                                    <input type="hidden" name="ins_cours">
+                                    <input type="submit" name="ins_cours" class="btn btn-primary px-4 py-2 fs-3 mt-4" value="S'inscrire">
                                     <input type="hidden" name="id_c" value="<?= $id_c ?>">
                                 </form>
                             <?php
                             }
                             ?>
-
                         </div>
                     </div>
                 </div>
@@ -109,30 +99,29 @@
         foreach ($data as $cours) { ?>
             <div id="debutant-carousel" class="carousel slide">
                 <div class="carousel-title"></div>
- <!--                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#debutant-carousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#debutant-carousel" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#debutant-carousel" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#debutant-carousel" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                </div> -->
-
                 <div class="carousel-inner">
                     <div class="carousel-item active c-item">
                         <img src="/Web_L2/assets/images/debutant1.png" class="d-block w-100 c-img small-carousel-img" alt="Slide 1">
                         <div class="carousel-caption top-0 mt-4">
-                            <h1 class="display-1 fw-bolder "><?= $cours["titre"] ?></h1>
+                            <h1 class="fw-bolder"><?= $cours["titre"] ?></h1>
                             <p class="mt-5 fs-3"><?= $cours["prof"] ?></p>
+                            <p class="mt-5 fs-3"><?= $cours["description"] ?></p>
                         </div>
                     </div>
                 </div>
             </div>
     <?php
-        }
-    }?>
+        } 
+    ?>
+        <form action="/Web_L2/controller/connexionController.php" method="post">
+            <div class="col-2 d-flex justify-content-end">
+                <input type="submit" value="Se connecter" class="btn btn-primary">
+            </div>
+            <input type="hidden" name="connexion">
+        </form>
+    <?php
+    }
+    ?>
 
 
 </body>
