@@ -70,7 +70,7 @@
                             </div>
 
                             <label>Description</label>
-                            <textarea name="description" rows="4" class="form-control"></textarea>
+                            <textarea name="description" rows="4" class="form-control" required></textarea>
 
                             <div class="form-group">
                                 <label>Services de base</label><br>
@@ -88,7 +88,7 @@
                                 </div><br>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                                    <button type="submit" class="btn btn-primary" name="envoyer">Envoyer</button>
                                 </div>
                             </div>
                         </form>
