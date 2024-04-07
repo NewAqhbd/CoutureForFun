@@ -6,14 +6,14 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Couture For Fun</title>
-  <!-- Liens vers Bootstrap CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/Web_L2/lib/homepage_style.css">
-  <script src="/Web_L2/lib/homepage_script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couture For Fun</title>
+    <!-- Liens vers Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Web_L2/lib/homepage_style.css">
+    <script src="/Web_L2/lib/homepage_script.js"></script>
 </head>
 
 <header>
